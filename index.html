@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jainav Delivers</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1 class="animated-heading">JAI FILM BOOKINGS</h1>
+        <div class="search-bar">
+            <input type="text" placeholder="Search for restaurants or dishes">
+        </div>
+        <div class="profile-icon">
+            <!-- Profile icon here -->
+        </div>
+    </header>
+    <main>
+        <section class="categories">
+            <!-- Categories content -->
+        </section>
+        <section class="featured">
+            <!-- Featured restaurants and offers -->
+        </section>
+    </main>
+    <nav class="bottom-nav">
+        <div class="nav-item">Home</div>
+        <div class="nav-item">Search</div>
+        <div class="nav-item">Orders</div>
+        <div class="nav-item">Profile</div>
+    </nav>
+    <div class="sidebar">
+        <ul>
+            <!-- Removed menu items -->
+        </ul>
+    </div>
+    <div class="auth-container">
+        <div class="login-form">
+            <h2>Login</h2>
+            <input type="text" placeholder="Username" id="login-username">
+            <input type="password" placeholder="Password" id="login-password">
+            <button id="login-button">Login</button>
+            <p>Don't have an account? <a href="#" id="show-signup">Sign up</a></p>
+        </div>
+        <div class="signup-form" style="display: none;">
+            <h2>Sign Up</h2>
+            <input type="email" placeholder="Email" id="signup-email">
+            <button id="send-otp">Send OTP</button>
+            <input type="text" placeholder="Enter OTP" id="otp" style="display: none;">
+            <input type="password" placeholder="Create Password" id="signup-password" style="display: none;">
+            <input type="password" placeholder="Confirm Password" id="confirm-password" style="display: none;">
+            <button id="register-button" style="display: none;">Register</button>
+            <p>Already have an account? <a href="#" id="show-login">Login</a></p>
+        </div>
+    </div>
+    <script src="auth.js"></script>
+    <script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const registerButton = document.getElementById('register-button');
+
+        registerButton.addEventListener('click', () => {
+            console.log('Register button clicked');
+            // Simulate registration process
+            const password = document.getElementById('signup-password').value;
+            const confirm = document.getElementById('confirm-password').value;
+            if (password === confirm) {
+                alert('Registration successful!');
+                // Additional registration logic here
+            } else {
+                alert('Passwords do not match!');
+            }
+        });
+    });
+    </script>
+</body>
+</html>
